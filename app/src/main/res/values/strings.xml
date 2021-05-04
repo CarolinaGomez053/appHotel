@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">hotelesAndroid2</string>
+    <string name="btnRegistrar">Registrarse</string>
+    <string name="btnIngresar">Ingresar</string>
+    <string name="et1">Correo Electronico</string>
+    <string name="et2">Contraseña</string>
+
+
+    <string name="etCiudadApto">Ciudad del Apartamento</string>
+    <string name="etPaisApto">Pais del Apartamento </string>
+    <string name="etDirección">Dirección del Apartamento</string>
+    <string name="etNumeroHabitaciones">Numero de Habitaciones</string>
+    <string name="etValorNoche">Valor por Noche</string>
+    <string name="etReseña">Reseña </string>
+    <string name="btnGuardarApto">Guardar Apartamento</string>
+
+    <string name="btnRegistrarApto">Registrar Apartamento</string>
+    <string name="btnCerrarSesion">Cerrar Sesion</string>
+    <string name="btnVerApto">Ver Apartamentos</string>
+
+
+    <string name="etNombre">Nombre completo</string>
+    <string name="etCorreo">Correo</string>
+    <string name="etContraseña">Constraseña</string>
+    <string name="etPais">Pais</string>
+    <string name="etCiudad">Ciudad</string>
+    <string name="btnGuardar">Guardar</string>
+
+</resources>

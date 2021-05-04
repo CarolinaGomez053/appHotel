@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "834212998957",
+    "project_id": "hotelesandroid2",
+    "storage_bucket": "hotelesandroid2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:834212998957:android:ab22ef9fe7a5d0bb42ada4",
+        "android_client_info": {
+          "package_name": "com.moviles2.hotelesandroid2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "834212998957-qoj0t6gspkl095nuvufhbufctitnq37p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9NC2BEwQiA8_eXHh5ikasBADbY7boSag"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "834212998957-qoj0t6gspkl095nuvufhbufctitnq37p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
