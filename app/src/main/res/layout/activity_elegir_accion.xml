@@ -39,7 +39,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/btnRegistrarApto"
+            android:id="@+id/btnRegistrarUsuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -52,7 +52,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etValorNoche" />
+            app:layout_constraintTop_toBottomOf="@+id/etCiudadRegistro" />
 
         <Button
             android:id="@+id/btnLeerApto"
@@ -68,7 +68,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etValorNoche" />
+            app:layout_constraintTop_toBottomOf="@+id/etCiudadRegistro" />
 
         <Button
             android:id="@+id/btnCerrarSesion"
@@ -83,6 +83,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etValorNoche" />
+            app:layout_constraintTop_toBottomOf="@+id/etCiudadRegistro" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

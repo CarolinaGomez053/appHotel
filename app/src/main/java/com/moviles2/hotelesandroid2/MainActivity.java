@@ -3,6 +3,7 @@ package com.moviles2.hotelesandroid2;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -31,11 +32,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         etName =findViewById(R.id.etCiudadApto);
-        etContraseñaRegistro= findViewById(R.id.etDireccionAPto);
-        etCorreoRegistro=findViewById(R.id.etPaisApto);
-        etPais=findViewById(R.id.etNumeroHab);
-        etCiudad=findViewById(R.id.etValorNoche);
-        btnGuardar=findViewById(R.id.btnRegistrarApto);
+        etContraseñaRegistro= findViewById(R.id.etContraseñaRegistro);
+        etCorreoRegistro=findViewById(R.id.etCorreoRegistro);
+        etPais=findViewById(R.id.etPaisRegistro);
+        etCiudad=findViewById(R.id.etCiudadRegistro);
+        btnGuardar=findViewById(R.id.btnRegistrarUsuario);
 
 
     }
@@ -61,6 +62,8 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(DocumentReference documentReference) {
                         Toast.makeText(MainActivity.this, "Usuario Registrado", Toast.LENGTH_SHORT).show();
+                        Intent RegistrarDatos = new Intent(getApplicationContext(), MainActivity2.class);
+                        startActivity(RegistrarDatos);
                         Log.d("registroUsuario", "DocumentSnapshot added with ID: " + documentReference.getId());
                     }
                 })

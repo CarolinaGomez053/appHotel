@@ -33,19 +33,7 @@ public class MainActivity2 extends AppCompatActivity {
         etContraseña = findViewById(R.id.etContraseña);
     }
 
-        public void RegistrarDatos (View view){
-            Intent RegistrarDatos = new Intent(this, MainActivity.class);
-            startActivity(RegistrarDatos);
-    }
-
-    public void Ingresar (View view){
-        Intent Ingresar = new Intent(this, elegirAccion.class);
-        startActivity(Ingresar);
-    }
-
-        public void RegisterUser (View view){
-
-
+        public void RegisterUser (View view) {
         String email= etCorreo.getText().toString();
         String password =etContraseña.getText().toString();
             mAuth.createUserWithEmailAndPassword(email, password)
@@ -53,16 +41,56 @@ public class MainActivity2 extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
-
+                                Intent RegistrarDatos = new Intent(getApplicationContext(), MainActivity.class);
+                                startActivity(RegistrarDatos);
 
                             } else {
                                 // If sign in fails, display a message to the user.
-                                Toast.makeText(MainActivity2.this, "", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity2.this, "Por favor ingrese correo y contraseño con el que desea hacer el registro", Toast.LENGTH_SHORT).show();
                             }
                         }
-                    });
-        }
 
+
+                    });
+    }
+
+    public void onStart(View view) {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if(currentUser != null){
+          //  reload();
+        }
+    }
+
+
+    public void iniciarSesión(View view){
+        String email= etCorreo.getText().toString();
+        String password =etContraseña.getText().toString();
+        mAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            // Sign in success, update UI with the signed-in user's information
+                            FirebaseUser user = mAuth.getCurrentUser();
+                           //updateUI(user);
+
+                            Intent Ingresar = new Intent(getApplicationContext(), ListApartmentActivity.class);
+                            startActivity(Ingresar);
+                        } else {
+                            // If sign in fails, display a message to the user.
+
+                            Toast.makeText(getApplicationContext(), "Los datos ingresados no son correctos, validelos o Registrese",
+                                    Toast.LENGTH_SHORT).show();
+                            //updateUI(null);
+                        }
+                    }
+                });
+
+
+
+    }
 
 
 

@@ -3,19 +3,18 @@ package com.moviles2.hotelesandroid2;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
@@ -33,12 +32,12 @@ public class RegistrarApto extends AppCompatActivity {
         setContentView(R.layout.activity_registrar_apto);
 
         etCiudadApto =findViewById(R.id.etCiudadApto);
-        etPaisApto=findViewById(R.id.etPaisApto);
-        etDireccionAPto=findViewById(R.id.etDireccionAPto);
-        etNumeroHab=findViewById(R.id.etNumeroHab);
-        etValorNoche=findViewById(R.id.etValorNoche);
-        etReseñaApto=findViewById(R.id.etValorNoche);
-        btnRegistrarApto=findViewById(R.id.btnRegistrarApto);
+        etPaisApto=findViewById(R.id.etCorreoRegistro);
+        etDireccionAPto=findViewById(R.id.etContraseñaRegistro);
+        etNumeroHab=findViewById(R.id.etPaisRegistro);
+        etValorNoche=findViewById(R.id.etCiudadRegistro);
+        etReseñaApto=findViewById(R.id.etCiudadRegistro);
+        btnRegistrarApto=findViewById(R.id.btnRegistrarUsuario);
     }
 
 
@@ -78,6 +77,20 @@ public class RegistrarApto extends AppCompatActivity {
                 });
     }
 
+    public boolean onOptionsItemSelected(MenuItem item){
+        int id = item.getItemId();
+
+        if (id == R.id.item_logout) {
+            Intent logout = new Intent(getApplicationContext(), MainActivity2.class);
+            startActivity(logout);
+        }
+        else if(id==R.id.itemRegistrarApto){
+
+            Intent intent = new Intent(getApplicationContext(), RegistrarApto.class);
+            startActivity(intent);
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
 
 }

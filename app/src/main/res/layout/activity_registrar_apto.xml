@@ -7,6 +7,7 @@
     tools:context=".RegistrarApto">
 
     <LinearLayout
+        android:id="@+id/layRegistrarApartamento"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -27,7 +28,7 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/etPaisApto"
+            android:id="@+id/etCorreoRegistro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -40,7 +41,7 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/etDireccionAPto"
+            android:id="@+id/etContraseñaRegistro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -53,7 +54,7 @@
             android:inputType="textLongMessage" />
 
         <EditText
-            android:id="@+id/etNumeroHab"
+            android:id="@+id/etPaisRegistro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -66,7 +67,7 @@
             android:inputType="number" />
 
         <EditText
-            android:id="@+id/etValorNoche"
+            android:id="@+id/etCiudadRegistro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -92,7 +93,7 @@
             android:inputType="textPersonName" />
 
         <Button
-            android:id="@+id/btnRegistrarApto"
+            android:id="@+id/btnRegistrarUsuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"

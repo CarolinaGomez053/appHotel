@@ -7,6 +7,7 @@
     tools:context=".apartamento">
 
     <LinearLayout
+        android:id="@+id/LayRegistrarApart"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:onClick="SaveApartament"
@@ -36,7 +37,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/etPaisApto"
+        android:id="@+id/etCorreoRegistro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -52,7 +53,7 @@
         app:layout_constraintTop_toBottomOf="@+id/etCiudadApto" />
 
     <EditText
-        android:id="@+id/etDireccionAPto"
+        android:id="@+id/etContraseñaRegistro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -65,10 +66,10 @@
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPaisApto" />
+        app:layout_constraintTop_toBottomOf="@+id/etCorreoRegistro" />
 
     <EditText
-        android:id="@+id/etNumeroHab"
+        android:id="@+id/etPaisRegistro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -82,10 +83,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.597"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etDireccionAPto" />
+        app:layout_constraintTop_toBottomOf="@+id/etContraseñaRegistro" />
 
     <EditText
-        android:id="@+id/etValorNoche"
+        android:id="@+id/etCiudadRegistro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -99,7 +100,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.542"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNumeroHab" />
+        app:layout_constraintTop_toBottomOf="@+id/etPaisRegistro" />
 
     <EditText
         android:id="@+id/etReseña"
@@ -116,7 +117,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etValorNoche" />
+        app:layout_constraintTop_toBottomOf="@+id/etCiudadRegistro" />
 
     <Button
         android:id="@+id/btnRegistrarApto"
@@ -131,6 +132,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etValorNoche" />
+        app:layout_constraintTop_toBottomOf="@+id/etCiudadRegistro" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

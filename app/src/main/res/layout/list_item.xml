@@ -9,12 +9,12 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="5dp">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/tvCiudadApto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
@@ -24,7 +24,7 @@
             android:text="TextView" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/tvPaisApto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
@@ -33,7 +33,7 @@
             android:text="TextView" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/tvDireccionApto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
@@ -42,7 +42,7 @@
             android:text="TextView" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/tvNumeroHabitaciones"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
@@ -51,12 +51,27 @@
             android:text="TextView" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/tvValorApto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_marginLeft="15dp"
             android:layout_marginBottom="5dp"
             android:text="TextView" />
+
+        <TextView
+            android:id="@+id/tvReseña"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="5dp"
+            android:text="TextView" />
+
+
+
+
+
+
     </LinearLayout>
 </androidx.cardview.widget.CardView>
