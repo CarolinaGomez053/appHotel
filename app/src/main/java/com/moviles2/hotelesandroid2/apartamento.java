@@ -32,10 +32,10 @@ public class apartamento extends AppCompatActivity {
         etCiudadApto =findViewById(R.id.etCiudadApto);
         etPaisApto= findViewById(R.id.etCorreoRegistro);
         etDireccionAPto=findViewById(R.id.etContraseñaRegistro);
-        etNumeroHab=findViewById(R.id.etPaisRegistro);
-        etValorNoche=findViewById(R.id.etCiudadRegistro);
-        etReseña=findViewById(R.id.etCiudadRegistro);
-        btnGuardarApto=findViewById(R.id.btnRegistrarUsuario);
+        etNumeroHab=findViewById(R.id.etPais);
+        etValorNoche=findViewById(R.id.etCiudad);
+        etReseña=findViewById(R.id.etCiudad);
+        btnGuardarApto=findViewById(R.id.btnGuardar);
 
 
     }

@@ -34,10 +34,10 @@ public class RegistrarApto extends AppCompatActivity {
         etCiudadApto =findViewById(R.id.etCiudadApto);
         etPaisApto=findViewById(R.id.etCorreoRegistro);
         etDireccionAPto=findViewById(R.id.etContraseñaRegistro);
-        etNumeroHab=findViewById(R.id.etPaisRegistro);
-        etValorNoche=findViewById(R.id.etCiudadRegistro);
-        etReseñaApto=findViewById(R.id.etCiudadRegistro);
-        btnRegistrarApto=findViewById(R.id.btnRegistrarUsuario);
+        etNumeroHab=findViewById(R.id.etPais);
+        etValorNoche=findViewById(R.id.etCiudad);
+        etReseñaApto=findViewById(R.id.etCiudad);
+        btnRegistrarApto=findViewById(R.id.btnGuardar);
     }
 
 

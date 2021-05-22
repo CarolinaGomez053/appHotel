@@ -31,14 +31,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        etName =findViewById(R.id.etCiudadApto);
+        etName =findViewById(R.id.etName);
         etContraseñaRegistro= findViewById(R.id.etContraseñaRegistro);
         etCorreoRegistro=findViewById(R.id.etCorreoRegistro);
-        etPais=findViewById(R.id.etPaisRegistro);
-        etCiudad=findViewById(R.id.etCiudadRegistro);
-        btnGuardar=findViewById(R.id.btnRegistrarUsuario);
-
-
+        etPais=findViewById(R.id.etPais);
+        etCiudad=findViewById(R.id.etCiudad);
+        btnGuardar=findViewById(R.id.btnGuardar);
     }
 
      public void saveUser(View view){

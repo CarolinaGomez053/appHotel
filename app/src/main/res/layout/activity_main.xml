@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <EditText
-            android:id="@+id/etNombre"
+            android:id="@+id/etName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -56,7 +56,7 @@
             android:inputType="textPassword" />
 
         <EditText
-            android:id="@+id/etPaisRegistro"
+            android:id="@+id/etPais"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -69,7 +69,7 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/etCiudadRegistro"
+            android:id="@+id/etCiudad"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -82,7 +82,7 @@
             android:inputType="textPersonName" />
 
         <Button
-            android:id="@+id/btnRegistrarUsuario"
+            android:id="@+id/btnGuardar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="saveUser"

@@ -69,8 +69,36 @@
             android:text="TextView" />
 
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
 
+            <Button
+                android:id="@+id/btnEditApto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="#084298"
+                android:onClick="deleteUser"
+                android:text="Editar"
+                android:textColor="#F8F5F5" />
 
+            <Button
+                android:id="@+id/btnDeleteApto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:backgroundTint="#9E2020"
+                android:onClick="deleteApto"
+                android:text="Eliminar" />
+        </LinearLayout>
 
 
     </LinearLayout>

@@ -12,11 +12,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 
@@ -51,12 +55,24 @@ public class ListApartmentActivity extends AppCompatActivity {
                 holder.tvNumeroHabitaciones.setText(model.getHabitaciones());
                 holder.tvValorApto.setText(model.getValor());
                 holder.tvReseña.setText(model.getReseña());
-                holder.itemView.setOnClickListener(new View.OnClickListener() {
+                String id = getSnapshots().getSnapshot(position).getId();
+
+                holder.btnDeleteApto.setOnClickListener(new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(ListApartmentActivity.this, "" + id, Toast.LENGTH_SHORT).show();
+                        deleteApto(id);
+
+                    }
+                });
+                /*holder.itemView.setOnClickListener(new View.OnClickListener()
+                {
                     @Override
                     public void onClick(View v) {
                         Toast.makeText(ListApartmentActivity.this, "postion"+position, Toast.LENGTH_SHORT).show();
                     }
-                });
+                });*/
 
             }
 
@@ -74,17 +90,51 @@ public class ListApartmentActivity extends AppCompatActivity {
     }
 
     private class ApartamentsViewHolder extends RecyclerView.ViewHolder{
+
         TextView tvCiudadApto,tvPaisApto,tvDireccionApto,tvValorApto,tvReseña,tvNumeroHabitaciones;
+        Button btnDeleteApto, btnEditApto;
+
         public ApartamentsViewHolder(@NonNull View itemView) {
             super(itemView);
+
             tvCiudadApto = itemView.findViewById(R.id.tvCiudadApto);
             tvPaisApto = itemView.findViewById(R.id.tvPaisApto);
             tvDireccionApto = itemView.findViewById(R.id.tvDireccionApto);
             tvValorApto = itemView.findViewById(R.id.tvValorApto);
             tvReseña = itemView.findViewById(R.id.tvReseña);
             tvNumeroHabitaciones = itemView.findViewById(R.id.tvNumeroHabitaciones);
+            btnDeleteApto = itemView.findViewById(R.id.btnDeleteApto);
+            btnEditApto = itemView.findViewById(R.id.btnEditApto);
         }
     }
+
+
+
+
+    public void deleteApto(String id) {
+        db.collection("apartaments").document((id))
+                .delete()
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Toast.makeText(ListApartmentActivity.this, "Documento Eliminado", Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(ListApartmentActivity.this, " Error", Toast.LENGTH_SHORT).show();
+
+                    }
+                });
+    }
+
+
+
+
+
+
+
 
     @Override
     protected void onStart() {
@@ -118,6 +168,8 @@ public class ListApartmentActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+
 
 
 
