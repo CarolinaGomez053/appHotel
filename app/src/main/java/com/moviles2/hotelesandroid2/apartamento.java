@@ -3,8 +3,11 @@ package com.moviles2.hotelesandroid2;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -94,6 +97,32 @@ public class apartamento extends AppCompatActivity {
                 });
     }
 
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.menu_overflow, menu);
+        return true;
+    }
+
+    //metodo para asignar las funciones a cada item
+    public boolean onOptionsItemSelected(MenuItem item){
+        int id = item.getItemId();
+
+        if (id == R.id.item_logout) {
+            Intent logout = new Intent(getApplicationContext(), MainActivity2.class);
+            startActivity(logout);
+        }
+        else if(id==R.id.itemRegistrarApto){
+
+            Intent intent = new Intent(getApplicationContext(), RegistrarApto.class);
+            startActivity(intent);
+        }
+
+        else if(id==R.id.verAptos){
+            Intent Ingresar = new Intent(getApplicationContext(), ListApartmentActivity.class);
+            startActivity(Ingresar);
+    }
+        return super.onOptionsItemSelected(item);
+
+    }
 
 
 }

@@ -128,6 +128,7 @@ public class ListApartmentActivity extends AppCompatActivity {
                     }
                 });
     }
+    
 
 
 
