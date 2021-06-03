@@ -4,27 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegistrarApto">
+    tools:context=".MainActivity">
 
     <LinearLayout
-        android:id="@+id/layRegistrarUsuario1"
+        android:id="@+id/LayRegistrarUsuario"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="-54dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <EditText
-            android:id="@+id/etnombre"
+            android:id="@+id/etName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginLeft="32dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="100dp"
             android:layout_marginEnd="32dp"
             android:layout_marginRight="32dp"
             android:ems="10"
-            android:hint="@string/etCiudadApto"
+            android:hint="@string/etNombre"
             android:inputType="textPersonName" />
 
         <EditText
@@ -33,11 +35,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginLeft="32dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="40dp"
             android:layout_marginEnd="32dp"
             android:layout_marginRight="32dp"
             android:ems="10"
-            android:hint="@string/etPaisApto"
+            android:hint="@string/etCorreo"
             android:inputType="textPersonName" />
 
         <EditText
@@ -46,12 +48,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginLeft="32dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="40dp"
             android:layout_marginEnd="32dp"
             android:layout_marginRight="32dp"
             android:ems="10"
-            android:hint="@string/etDirección"
-            android:inputType="textLongMessage" />
+            android:hint="@string/etContraseña"
+            android:inputType="textPassword" />
 
         <EditText
             android:id="@+id/etPais"
@@ -59,12 +61,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginLeft="32dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="40dp"
             android:layout_marginEnd="32dp"
             android:layout_marginRight="32dp"
             android:ems="10"
-            android:hint="@string/etNumeroHabitaciones"
-            android:inputType="number" />
+            android:hint="@string/etPais"
+            android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/etCiudad"
@@ -72,37 +74,24 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginLeft="32dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="40dp"
             android:layout_marginEnd="32dp"
             android:layout_marginRight="32dp"
             android:ems="10"
-            android:hint="@string/etValorNoche"
-            android:inputType="number" />
-
-        <EditText
-            android:id="@+id/etReseñaApto"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginLeft="32dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginRight="32dp"
-            android:ems="10"
-            android:hint="@string/etReseña"
+            android:hint="@string/etCiudad"
             android:inputType="textPersonName" />
 
         <Button
             android:id="@+id/btnGuardar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="saveUser"
             android:layout_marginStart="32dp"
             android:layout_marginLeft="32dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="40dp"
             android:layout_marginEnd="32dp"
             android:layout_marginRight="32dp"
-            android:onClick="RegistrarApto"
-            android:text="@string/btnRegistrarApto" />
+            android:text="@string/btnGuardar" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

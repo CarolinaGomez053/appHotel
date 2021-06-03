@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListApartmentActivity">
+    tools:context=".ListUsersActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvApartmentList"
+        android:id="@+id/rvUsersList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
